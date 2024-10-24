@@ -4,8 +4,12 @@ spring:
   application:
     name: 'demo'
   datasource:
-    hikari:
-      maximum-pool-size: 5
     url: '${DB_URL}'
     username: '${DB_USERNAME}'
     password: '${DB_PASSWORD}'
+
+    hikari:
+      validation-timeout: 5000               # 5 seconds
+      connection-timeout: 30000               # 30 seconds
+      maximum-pool-size: 5                    # Maximum 5 connections to mysql Data base
+      connection-test-query: "SELECT 1"       # Validation query
