@@ -4,9 +4,9 @@ spring:
   application:
     name: 'demo'
   datasource:
-    url: '${DB_URL}'
-    username: '${DB_USERNAME}'
-    password: '${DB_PASSWORD}'
+    url: '${DB_URL:jdbc:mysql://localhost:3306/sql12740074}'
+    username: '${DB_USERNAME:root}'
+    password: '${DB_PASSWORD:defaultpassword}'
 
     hikari:
       validation-timeout: 5000               # 5 seconds
