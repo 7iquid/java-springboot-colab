@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM maven:3.9.0-openjdk-22-slim AS build
+FROM maven:3.9.0-openjdk-17-slim AS build
 
 # Set the working directory
 WORKDIR /app
@@ -12,7 +12,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Stage 2: Create the final image
-FROM openjdk:22-jdk-slim
+FROM openjdk:17-jdk-slim
 
 # Set the working directory
 WORKDIR /app
