@@ -6,11 +6,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 public class ProductDto {
-
     private String name;
-
     private Integer page = 1;
-
     private Integer pageSize = 10;
-
 }
