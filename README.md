@@ -6,7 +6,7 @@
 
 ## DataBase
 ```yml
-type: emysql
+type: mysql
 dbname: sql12740074
 host: https://www.freesqldatabase.com/
 ```
